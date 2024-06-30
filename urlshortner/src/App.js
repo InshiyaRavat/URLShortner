@@ -7,7 +7,7 @@ function App() {
   async function handleSubmit(e){
     e.preventDefault()
     console.log("calling post api",url)
-    const response = await axios.post('http://localhost:5000/shorten',{url})
+    const response = await axios.post('https://urlshortner-c0od.onrender.com/shorten',{url})
     console.log(response.data)
     setId(response.data)
   }
@@ -19,7 +19,7 @@ function App() {
   async function callShortUrl(){
     console.log("calling get api")
     console.log(id)
-    const response = await axios.get(`http://localhost:5000/${id}`)
+    const response = await axios.get(`https://urlshortner-c0od.onrender.com/${id}`)
     console.log(response.data)
   }
   return (
