@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: ["http://localhost:3000"],
+    origin: ["http://localhost:3000","https://urlshortner-frontend-0k74.onrender.com"],
     methods: ['GET', 'POST', 'DELETE', 'PUT']
 }));
 const port = process.env.PORT || 6000;
